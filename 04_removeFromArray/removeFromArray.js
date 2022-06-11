@@ -3,6 +3,9 @@ const removeFromArray = function (givenArray, ...numbers) {
 
   for (let number of numbers) {
     let indexOfNumber = array.indexOf(number);
+    if (indexOfNumber === -1) {
+      continue;
+    }
     array.splice(indexOfNumber, 1);
   }
   return array;
